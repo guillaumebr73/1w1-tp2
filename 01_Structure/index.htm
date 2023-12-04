@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP2</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="css/formulaire.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="entete">
+        <header>
+            <!-- 
+                Pour créer rapidement un logo
+                https://www.canva.com/templates/?query=logo  
+            -->
+            <div>
+                <figure class="entete__logo"><img src="images/logo2.png" alt="logo"></figure>
+            </div>
+            <h1>TP2</h1>
+            <!-- https://svgbox.net/ -->
+            <!-- id peut être utilisé une seule fois dans le document. La même class peut être utilisé plusieurs fois-->
+            
+            <input type="checkbox" id="chk_burger">
+            <label id="burger" for="chk_burger">
+                <img src="https://s2.svgbox.net/hero-outline.svg?ic=menu-alt-1&color=000" width="32" height="32">
+                <img src="https://s2.svgbox.net/hero-solid.svg?ic=x&color=000" width="32" height="32">
+            </label>
+            
+            <nav class="navigation">
+                <a href="#accueil">Accueil</a>
+                <a href="#horaire">Horaire</a>
+                <a href="#inscription">Inscription</a>
+                <a href="#galerie">Galerie</a>
+                <a href="#article">Article</a>
+            </nav>  
+        </header>
+    </div>
+    <div id="accueil">
+        <section id="accueil__2">
+            <h2>Accueil</h2>
+            <h3>Présentation</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur unde assumenda deleniti aspernatur animi saepe ipsam cupiditate, veniam enim quisquam nesciunt quibusdam beatae dolore veritatis corrupti amet rem. Similique, itaque.</p>
+        </section>
+       </div> <!-- fin #accueil -->
+       <div id="horaire">
+        <section id="horaire__2">
+            <h2>Horaire</h2>
+            <!-- conteneur principal du tableau -->
+            <table class="horaire">
+                <caption>Horaire session automne 2023</caption>
+                <!-- le premier tr, la première ligne, (table row), 
+                  contient les 5 jours de la semaine -->
+                <tr>
+                    <th></th> <!-- la première cellule est vide -->
+                    <th>LUN</th>
+                    <th>MAR</th>
+                    <th>MER</th>
+                    <th>JEU</th>
+                    <th>VEN</th>
+                </tr>
+                <!-- pour chacune des lignes suivantes le premier contient l'heure de début du cours-->
+               <tr>
+                    <th>8h</th>
+                    <td></td> <!-- lundi -->
+                    <!-- On peut utiliser plus d'une classe dans un même élément-->
+                    <td></td> <!-- mardi -->
+                    <td rowspan='3' class="cours1m1">1M1</td> <!-- mercredi -->
+                    <td rowspan="2" class="cours1w1">1W1</td> <!-- jeudi -->
+                    <td rowspan="2" class="cours1m1">1M1</td> <!-- vendredi -->
+               </tr>
+        
+                <tr>
+                    <th>9h</th>
+                    <td rowspan="3" class="cours1w1">1W1</td> <!-- lundi -->
+                    <td></td> <!-- mardi -->
+                    <!-- <td class="cours1m1">1M1</td> --> <!-- mercredi -->
+                    
+                    
+               </tr>
+        
+                <tr>
+                    <th>10h</th>
+                    <td></td> <!-- mardi -->
+                    <!-- <td class="cours1m1">1M1</td> --> <!-- mercredi -->
+                    <td></td> <!-- jeudi -->
+                    <td class="coteDroit"></td> <!-- vendredi -->
+               </tr>
+        
+                <tr>
+                    <th>11h</th>
+                    <td></td> <!-- mardi -->
+                    <td></td> <!-- mercredi -->
+                    <td></td> <!-- jeudi -->
+                    <td rowspan="3" class="cours102">102</td> <!-- vendredi -->
+               </tr>
+        
+                <tr>
+                    <th>12h</th>
+                    <td></td> <!-- lundi -->
+                    <td rowspan="2" class="activites">Activités communes</td> <!-- mardi -->
+                    <td rowspan="3" class="cours1m2">1M2</td> <!-- mercredi -->
+                    <td rowspan="2" class="activites">Activités communes</td> <!-- jeudi -->
+               </tr>
+               
+               <tr>
+                    <th>13h</th>
+                    <td></td> <!-- lundi -->
+                    
+               </tr>
+        
+               <tr>
+                    <th>14h</th>
+                    <td></td> <!-- lundi -->
+                    <td rowspan="3" class="cours1m2">1M2</td> <!-- mardi -->
+            
+                    <td rowspan ="3" class="cours1j1">1J1</td> <!-- jeudi -->
+                    <td class="coteDroit"></td> <!-- vendredi -->
+               </tr>
+        
+               <tr>
+                    <th>15h</th>
+                    <td rowspan="2" class="cours1j1">1J1</td> <!-- lundi -->
+                    <td></td> <!-- mercredi -->
+                    <td class="coteDroit"></td> <!-- vendredi -->
+               </tr>
+               
+               <tr>
+                    <th>16h</th>
+                    <td rowspan="2" class="cours101">101</td> <!-- mercredi -->
+                    <td rowspan="2" class="cours101">101</td> <!-- vendredi -->
+               </tr>
+        
+               <tr>
+                    <th>17h</th>
+                    <td class="coteBas"></td> <!-- lundi -->
+                    <td class="coteBas"></td> <!-- mardi -->
+                    <td class="coteBas"></td> <!-- jeudi -->
+               </tr>
+            </table>
+        </section>
+       </div> <!-- fin #horaire -->
+       <div id="inscription">
+        <section id="inscription__2">
+            <h2>Inscription</h2>
+            <!-- https://www.w3schools.com/html/html_forms.asp -->
+             <form action="" class="formulaire">
+                <label class="form__nom" for="">Nom<input type="text"></label>
+                <label class="form__prenom" for="">Nom<input type="text"></label>
+               <fieldset class="langage">
+                <legend>Langage</legend>
+                <div>
+                <input type="checkbox"  id="chk__1">
+                <label for="chk__1">HTML</label>
+                </div>
+                <div>
+                <input type="checkbox"  id="chk__2">
+                <label for="chk__2">CSS</label>
+                </div>
+                <div>
+                <input type="checkbox"  id="chk__3">
+                <label for="chk__3">JS</label>
+                </div>
+                <div>
+                <input type="checkbox"  id="chk__4">
+                <label for="chk__4">PHP</label>
+                </div>
+               <div>
+                <input type="checkbox"  id="chk__5">
+                <label for="chk__5">MySQL</label>
+               </div>
+                <div>
+                <input type="checkbox"  id="chk__6">
+                <label for="chk__6">Wordpress</label>
+                </div>
+                
+            </fieldset>
+            <fieldset>
+                <!-- pour les radio bouton on créé un groupe en utilisant le même nom pour la même valeur pour l'attribut name-->
+                <legend>Age</legend>
+                <input type="radio" name="age" id="rad__1">
+                <label for="rad__1">11-15</label>
+                    
+                
+                <input type="radio" name="age" id="rad__2">
+                <label for="rad__2">16-20</label>
+                    
+                
+                <input type="radio" name="age" id="rad__3">
+                <label for="rad__3">21-25 </label>
+            </fieldset>
+    
+        </section>
+       </div> <!-- fin #inscription -->
+    
+       <div id="article">
+        <section id="article__2">
+            <h2>Article</h2>
+            <div class="principal__image">
+                <figure class="principal__img"><img src="images/Caillol_Melanie_image2.jpg" alt="image">Photo de mon amie, Alexiane, prise dans le cadre de mon cours de 1M2</figure>
+            </div>
+        </section>
+       </div>
+       <div id="contact">
+        <footer class="piedPage">
+            <div class="global">
+                <footer class="piedPage">
+                        <div class="piedPage__div">
+                            <h1 class="piedPage__h1">Adresse</h1>
+                            <ul class="piedPage__ul">
+                                <li>3800 Sherbrooke est</li>
+                                <li>Montréal, QC</li>
+                                <li>H1X 2A2</li>
+                            </ul>
+                        </div>
+        
+                        <div class="piedPage__div">
+                            <h1 class="piedPage__h1">Cours</h1>
+                            <ul class="piedPage__ul">
+                                <li>1W1-Mise en page Web</li>
+                                <li>1J1-Animation et intéractivité en jeux</li>
+                                <li>1M1-Création vidéo</li>
+                                <li>1M2-Conception graphique et imagerie matricielle</li>
+                                <li>101-Écriture et littérature</li>
+                                <li>102-Langue anglaise et culture</li>
+                            </ul>
+                        </div>
+        
+                        <div class="piedPage__div3">
+                            <h1 class="piedPage__h1">Résumé</h1>
+                            <h3 class="piedPage__h3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum iusto corporis commodi illum temporibus soluta recusandae repudiandae placeat debitis, tempore voluptas ad velit voluptatem necessitatibus reiciendis nemo at magnam ut!</h3>
+                        </div>
+        </footer>
+       </div>
+    </body>
+    </html>

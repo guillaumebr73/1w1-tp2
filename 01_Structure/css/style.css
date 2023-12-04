@@ -1,0 +1,264 @@
+* {
+    margin : 0;
+    padding:0;
+}
+
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+
+/*  la balise body est le conteneur principal
+     flexbox dont les enfants s'afficheront sur une colonne
+     flex-direction : column;
+*/     
+
+body{
+    display : flex;
+    flex-direction:column;
+} 
+
+/*
+opérateur de sélection « > » permet de sélectionner
+ l'enfant direct de la balise qui précède le «>»
+ La différence entre « > » et « » c'est que plus grand permet de sélectionner
+ l'enfant direct et « » permet de sélectionner l'enfant l'arrière petite enfant et ainsi de suite.
+
+ Le « > » est plus spécifique que l'aopérateur « »
+*/
+
+/*
+ C'est toujours le dernier élément de la suite qui est sélectionné. 
+ Et c'est sur cet élément qu'on applique la règle de style
+*/
+body  > div {
+    display : flex;
+    justify-content: center;
+ 
+}
+#entete {
+   
+}
+
+body > div > section,
+body > div > footer,
+body > div > header {
+    display : flex;
+    flex: 0 1 1100px;
+    border : 1px solid #aaa;
+    background-color: rgba(0,0,0,.1); /* filtre de transparence */
+}
+
+body > div > section {
+    padding-top : 100px;
+}
+
+body > div > header{
+    position : relative;
+}
+
+body > div > section{
+    min-height : 100vh;
+}
+/* Entete */
+body>div:nth-of-type(1){
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+}
+body>div:nth-of-type(2){
+    background-color: rgb(175, 189, 236);
+}
+body>div:nth-of-type(3){
+    background-color: rgb(189, 235, 105);
+}
+body>div:nth-of-type(4){
+    background-color: rgb(221, 166, 62)
+}
+body>div:nth-of-type(5){
+    background-color: rgb(221, 144, 183);
+}
+
+body>div:nth-of-type(6){
+    background-color: #fff;
+}
+
+#horaire__2{
+    display: flex;
+    flex-direction: column;
+}
+
+.horaire{
+    border-collapse: collapse;
+    flex: 1 0 80%;
+    
+}
+
+.horaire caption{
+    font-family: 'Leckerli One', cursive;
+    font-size: 3rem;
+    color: #000;
+}
+
+.horaire td, .horaire th{
+    /*border: 1px solid #aaa;*/
+    padding: 10px;
+    font-size: 3rem;
+    text-align: center;
+}
+.horaire th{
+    background-color: rgb(180,150,150);
+    border: 1px solid #9a1212;
+    
+}
+
+.horaire tr{
+   
+}
+
+.cours{
+    border: 1px solid #000;
+    background-color: #fff;
+}
+
+.horaire .activites{
+    background-color: rgb(232, 238, 146);
+    font-size: 0.8rem;
+    font-family: 'Courier Prime', monospace;
+}
+
+.horaire caption{
+    font-size: 2rem;
+    background-color: #fff;
+}
+
+.coteDroit {
+    border-right: 1px solid #000;
+}
+
+.coteBas{
+    border-bottom: 1px solid #000;
+}
+/* une classe ne peut pas commencer par un chiffre (.5w5 serait illégal)*/
+.cours1m1{
+    border: 1px solid #000000;
+    background-color: rgb(146, 238, 174);
+}
+
+.cours1w1{
+    border: 1px solid #000000;
+    background-color: rgb(238, 146, 146);
+}
+
+.cours102{
+    border: 1px solid #000000;
+    background-color: rgb(146, 204, 238);
+}
+
+.cours101{
+    border: 1px solid #000000;
+    background-color:  rgb(238, 183, 146);
+}
+
+.cours1j1{
+    border: 1px solid #000000;
+    background-color: rgb(238, 146, 230);
+}
+
+.cours1m2{
+    border: 1px solid #000000;
+    background-color: rgb(160, 146, 238);
+}
+
+/*entete*/
+
+.entete__logo{
+    width: 150px;
+    flex: 0 0 150px;
+    
+}
+
+.entete__logo img{
+    display: block;
+    width:100%;
+    margin: 0 0 0 10px;
+}
+
+/*accueil*/
+
+#accueil__2{
+    display: flex;
+    flex-direction: column;
+}
+
+/*inscription*/
+
+#inscription__2{
+    display: flex;
+    flex-direction: column;
+}
+
+/*article*/
+
+#article__2{
+    display: flex;
+    flex-direction:column;
+}
+
+.principal__image{
+    display: flex;
+    width: 50%;
+    flex: 0 0 500px;
+    flex-wrap: wrap;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.principal__img img{
+    display: block;
+    width:100%;
+    
+}
+
+/*footer*/
+
+.piedPage{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    align-content:flex-start;
+    gap: 10px;
+    padding: 10px;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.piedPage__div{
+    flex: 0 0 200px;
+    width:100%;
+    flex-direction: row;
+}
+
+.piedPage__div3{
+    flex: 0 0 500px;
+    width:100%;
+}
+.piedPage__ul{
+    font-size: 1rem;
+    list-style-position: inside;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+.piedPage__h3{
+    font-size: 1rem;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: oblique;
+}
+
+.piedPage__h1{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color:#444;
+}
