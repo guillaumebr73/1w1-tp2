@@ -1,0 +1,22 @@
+.galerie img {
+    
+}
+.galerie {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.galerie__figure{
+    flex: 0 1 200px;
+    border: 1px dotted #fffefe;
+}
+.galerie__img{
+    filter: grayscale(80%);
+    width: 100%;
+}
+.galerie__img:hover {
+    filter: grayscale(0);
+}
+.galerie__caption{
+
+}

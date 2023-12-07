@@ -40,7 +40,10 @@ body  > div {
  
 }
 #entete {
-   
+   background-color: white ;
+   position: sticky;
+   top: 0;
+   background-image: linear-gradient(0deg, rgb(87, 112, 253), green);
 }
 
 body > div > section,
@@ -49,7 +52,7 @@ body > div > header {
     display : flex;
     flex: 0 1 1100px;
     border : 1px solid #aaa;
-    background-color: rgba(0,0,0,.1); /* filtre de transparence */
+    background-color: rgba(255,255,255,.5); /* filtre de transparence */
 }
 
 body > div > section {
@@ -262,3 +265,16 @@ body>div:nth-of-type(6){
     font-family:Georgia, 'Times New Roman', Times, serif;
     color:#444;
 }
+
+h1{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: clamp(1rem, -0.875rem + 8.333vw, 2.5rem);
+    text-shadow: 6px 4px 12px #555;
+}
+h2{
+    font-size: clamp(1rem, -1.292rem + 7.333vw, 2.5rem);
+}
+h3{}
+h4{}
+
+p{}
